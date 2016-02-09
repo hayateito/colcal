@@ -1,0 +1,2 @@
+module ColcalHelper
+end
