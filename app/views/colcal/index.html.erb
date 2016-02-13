@@ -1,15 +1,18 @@
 <body>
-    <header class="header.fixed">
-        <div class="wrap-header clearfix">
-            <div id="logo">
-                <a href="http://localhost:3000/"><img src="http://placehold.jp/120x27.png" width="120" height="27" alt="ColCal">
-                </a>
+    <header id="js-accordion" class="header">
+        <div class="heading">
+        <h1 class="taitle">ColCal</h1>
+        <p class="heading-sentence">気になるあの芸人のスケジュール閲覧から予約まで！</p>
             </div>
-            <nav>
-                <ul class="main-nav">
+                    <span class="menu-button">
+        <i>
+        </i>
+    </span>
+            <nav class="nav-content">
+                <ul>
                     <li class="nav1">
                         <h6><span>芸人を探す</span></h6>
-                        <div class="menuoutline clearfix">
+                        <!-- <div class="menuoutline clearfix">
                             <ul class="nav-sub-geinin">
                                 <div class="gei">
                                    <li class="area-gei-name">
@@ -39,14 +42,14 @@
 
                                 </div>
                             </ul>
-                        </div>
+                        </div> -->
                     </li>
                     <li class="nav2">
                         <h6><span>全体カレンダー</span></h6>
                     </li>
                     <li class="nav3">
                         <h6><span>アクセスランキング</span></h6>
-                                    <li class="area-ranking">
+                                    <!-- <li class="area-ranking">
                                         <a href="1位芸人個人ページ">
                                             <dl>
                                                 <dt><img src="http://placehold.jp/220x310.png" width="80" alt="写真名前">
@@ -80,35 +83,41 @@
                                                 </dd>
                                             </dl>
                                         </a>
-                                    </li>
+                                    </li> -->
+                        </li>
+                    <li class="nav4">
+                        <h6><span>検索</span></h6>
+                    </form>
                     </li>
-                </ul>
-            </nav>
-            <div id="search">
-                <form method="post" action="http://localhost:3000/search/-/search/">
+                                     <form class="search" method="post" action="http://localhost:3000/search/-/search/">
                     <input type="search" value="" name="keyword" class="ie-css3">
                   <input type="image" class="searchBtn" src="http://placehold.jp/28x28.png" width="28" height="28" name="searchBtn" alt="検索">
-                </form>
-            </div>
+                </ul>
+            </nav>
             <!-- // #bx-search -->
         </div>
         <!-- // .wrap-header -->
-
     </header>
 
-<div id="wrap-slider">
-  <ul id="bxslider">
-        <li><a href="URL"><img src="http://placehold.jp/1600x640.png" alt="名前"></a></li>
-        <li><a href="URL"><img src="http://placehold.jp/1600x640.png" alt="名前"></a></li>
-        <li><a href="URL"><img src="http://placehold.jp/1600x640.png" alt="名前"></a></li>
-        <li><a href="URL"><img src="http://placehold.jp/1600x640.png" alt="名前"></a></li>
-        <li><a href="URL"><img src="http://placehold.jp/1600x640.png" alt="名前"></a></li>
-  </ul>
-</div>
 
+<script>
+$("document").ready(function(){
+  $('.single-item').slick();
+}); 
+</script>
 
-<section id="contents">
-  <h1><img src="http://placehold.jp/241x41.png" width="241" height="41" alt="芸人一覧"></h1>
+    <div class="main">
+        <div class="single-item">
+            <div><img src="http://placehold.jp/1600x640.png"></div>
+            <div><img src="http://placehold.jp/1600x640.png"></div>
+            <div><img src="http://placehold.jp/1600x640.png"></div>
+            <div><img src="http://placehold.jp/1600x640.png"></div>
+        </div>
+    </div>
+
+<div class = "background">
+<div class="contents">
+  <h1>芸人一覧<width="241" height="41" alt="芸人一覧"></h1>
   <ul id="list-geinin-top" class="clearfix">
 
         <div class="box-actress-outline">
@@ -181,78 +190,9 @@
 
   </ul><!--// #lst-actress -->
 
-
-
-
-  <!-- #bx-expand-list  拡大して表示させるための要素 -->
-  <div id="bx-expand-list-top" style="display:none;">
-    <div class="bx-inner-list-top">
-      <a href></a>
-    </div>
-    <div class="bx-newrelease">
-    </div>
-  </div><!--// #bx-expand-list -->
-
-  <hr class="line-segment">
-
-</section><!-- // #contents -->
-
-<div id="sect-information">
-  <section>
-    <div class="date-published ie-css3">
-      <span class="tx-month">2/8</span>
-    </div>
-    <div class="bx-detail">
-      <h2>サイト準備中</h2>
-      <p>2016/2/8<br>サイトの準備中です</p>
-      <p><a href="https://tech-camp.in/">TECH::CAMP</a></p>
-    </div>
-  </section>
-  <section>
-    <div class="date-published ie-css3">
-      <span class="tx-month">2/7</span>
-    </div>
-    <div class="bx-detail">
-      <h2>サイト準備開始</h2>
-      <p>2016/2/7<br>サイトの準備を開始しました</p>
-      <p><a href="https://tech-camp.in/">TECH::CAMP</a></p>
-    </div>
-  </section>
-</div><!--// #sect-information -->
-
+</div><!-- // #contents -->
+</div>
 <footer>
-<div class="wrap-footer">
-    <div class="sect-menu clearfix">
-        <div class="bx-menu01">
-            <h3><a href="">全体カレンダー</a></h3>
-        </div>
-        <div class="bx-menu02">
-            <h3>芸人を探す</h3>
-            <ul>
-                <li><a href="あ行まとめページ">あ行</a>&emsp;&emsp;<a href="か行まとめページ">か行</a></li>
-                <li><a href="さ行まとめページ">さ行</a>&emsp;&emsp;<a href="た行まとめページ">た行</a></li>
-                <li><a href="な行まとめページ">な行</a>&emsp;&emsp;<a href="は行まとめページ">は行</a></li>
-                <li><a href="ま行まとめページ">ま行</a>&emsp;&emsp;<a href="や行まとめページ">や行</a></li>
-                <li><a href="ら行まとめページ">ら行</a>&emsp;&emsp;<a href="わ行まとめページ">わ行</a></li>
-            </ul>
-        </div>
-        <div class="bx-menu03">
-            <h3>アクセスランキング</h3>
-        </div>
-        <div class="bx-menu04">
-            <h3>ニュース</h3>
-            <ul>
-                <li class="ico-twitter"><a href="https://twitter.com/hayateito" target="_blank">Twitter</a></li>
-            </ul>
-        </div>
-        <div class="bx-menu05">
-            <h3>企業情報</h3>
-        </div>
-        <div class="bx-menu06">
-            <h3>インフォメーション</h3>
-        </div>
-    </div>
-</div><!--// .wrap-footer -->
 
 <div id="wrap-footer-bottom">
     ColCal
