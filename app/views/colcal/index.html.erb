@@ -3,6 +3,48 @@
 <header id="pageHead">
   <h1 id="Title">ColCal</h1>
   <p id="catchcopy">気になるあの芸人のスケジュール閲覧から予約まで！</p>
+
+
+<div class="menu">
+        <div class="menu1"></div>
+        <div class="menu2"></div>
+        <div class="menu3"></div>
+</div>
+     
+
+
+<script>
+$(function(){
+    $(".menu").click(function(){
+        $(".menu1").toggleClass("menuclick1")
+    });
+    $(".menu").click(function(){
+        $(".menu2").toggleClass("menuclick2")
+    });
+    $(".menu").click(function(){
+        $(".menu3").toggleClass("menuclick3")
+    }); 
+});
+ 
+$(function(){
+            $('.menu').click(function(){
+             if ($('ul').css('display') == 'none') {
+            $('ul').slideDown('slow');
+            } else {
+             $('ul').slideUp('slow');
+             }
+            });
+        });
+ 
+</script>
+
+<ul style="display:none;">
+　<a href=""><li><p class="en">芸人を探す</p></li></a>
+    <a href=""><li><p class="en">全体カレンダー</p></li></a>
+    <a href=""><li><p class="en">アクセスランキング</p></li></a>
+</ul>
+
+
   <nav class="globalNavi">
     <ul>
       <li class="current"><a href="index.html">トップ</a></li>

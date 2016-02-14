@@ -42,6 +42,42 @@ a:hover { color: #996600; }
     text-align: center;
 }
 
+.menu
+{ width: 100px; height:100px; top: 0px; position:relative; cursor:pointer; }
+.menu1
+{ width:100px; height:20px; background-color:#000; position:absolute; top:0px; } 
+.menu2
+{ width:100px; height:20px; background-color:#000; position:absolute; top:40px; } 
+.menu3
+{ width:100px; height:20px; background-color:#000; position:absolute; top:80px; } 
+.menu1,.menu2,.menu3
+{ transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out; /* opera */
+  -moz-transition: all 0.5s ease-out; /* firefox */
+  -webkit-transition: all 0.5s ease-out; /* chrome, safari */
+  -ms-transition: all 0.5s ease-out; /* ie */ }
+.menuclick1
+{ top:40px;
+  -moz-transform: rotate(405deg);
+  -webkit-transform: rotate(405deg);
+  -o-transform: rotate(405deg);
+  -ms-transform: rotate(405deg);
+  transform: rotate(405deg); }
+.menuclick2
+{ opacity:0;}
+.menuclick3
+{ top:40px;
+  -moz-transform: rotate(-405deg);
+  -webkit-transform: rotate(-405deg);
+  -o-transform: rotate(-405deg);
+  -ms-transform: rotate(-405deg);
+  transform: rotate(-405deg); }
+
+
+
+
+
+
 #pageHead .globalNavi {
   border: solid #CCCCCC;
   border-width: 1px 0;
