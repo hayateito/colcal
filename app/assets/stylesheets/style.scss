@@ -43,7 +43,9 @@ a:hover { color: #996600; }
 }
 
 .menu
-{ width: 100px; height:100px; top: 0px; position:relative; cursor:pointer; }
+{ width: 100px; height:100px; top: 0px; position:relative; cursor:pointer;
+    padding-left: 1000px;
+ }
 .menu1
 { width:100px; height:20px; background-color:#000; position:absolute; top:0px; } 
 .menu2
