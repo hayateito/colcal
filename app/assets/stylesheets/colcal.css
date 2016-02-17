@@ -16,7 +16,6 @@ figure,
 footer,
 header,
 hgroup,
-menu,
 nav,
 section,
 summary {
@@ -63,3 +62,29 @@ p {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
+
+/* このクラスをfloat解除したい要素の親に指定する。 */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.flex-container {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+
+.twitter{
+  color: #55acee ;
+}
+.twitter:before {
+  font-size: 60px;
+}
+.youtube{
+  color: #cd201f;
+}
+.vine{
+  color: #00b389;
+}
+

@@ -1,8 +1,7 @@
 body {
-  color: #333333; 
-  background-color: #FFFFFF;
+  color: #333333;
+  background-color: #FFFEE5;
 }
-
 
 #page {
   width: 1100px;
@@ -30,7 +29,7 @@ a:hover { color: #996600; }
 #pageHead #Title {
   font-size: 30px;
   line-height: 1.2;
-  margin-bottom: 0;
+  margin: 0;
   font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
@@ -42,24 +41,54 @@ a:hover { color: #996600; }
     text-align: center;
 }
 
-.menu
-{ width: 100px; height:100px; top: 0px; position:relative; cursor:pointer;
-    padding-left: 1000px;
+.headmenu {
+  padding: 15px 0;
+  position: relative;
+}
+
+.menu {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
  }
-.menu1
-{ width:100px; height:20px; background-color:#000; position:absolute; top:0px; } 
-.menu2
-{ width:100px; height:20px; background-color:#000; position:absolute; top:40px; } 
-.menu3
-{ width:100px; height:20px; background-color:#000; position:absolute; top:80px; } 
-.menu1,.menu2,.menu3
-{ transition: all 0.5s ease-out;
+
+.menu1 {
+  width: 40px;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.menu2 {
+  width: 40px;
+  height: 5px;
+  background-color:#000;
+  position: absolute;
+  top: 18px;
+}
+
+.menu3 {
+  width: 40px;
+  height: 5px;
+  background-color:#000;
+  position:absolute;
+  bottom: 0px;
+}
+.menu1,.menu2,.menu3{ 
+  transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out; /* opera */
   -moz-transition: all 0.5s ease-out; /* firefox */
   -webkit-transition: all 0.5s ease-out; /* chrome, safari */
-  -ms-transition: all 0.5s ease-out; /* ie */ }
+  -ms-transition: all 0.5s ease-out; /* ie */ 
+}
 .menuclick1
-{ top:40px;
+{ top: 18px;
   -moz-transform: rotate(405deg);
   -webkit-transform: rotate(405deg);
   -o-transform: rotate(405deg);
@@ -68,7 +97,7 @@ a:hover { color: #996600; }
 .menuclick2
 { opacity:0;}
 .menuclick3
-{ top:40px;
+{ top: 18px;
   -moz-transform: rotate(-405deg);
   -webkit-transform: rotate(-405deg);
   -o-transform: rotate(-405deg);
@@ -76,14 +105,28 @@ a:hover { color: #996600; }
   transform: rotate(-405deg); }
 
 
+.menu:after {
+  content: "";
+  clear: both;
+  display: block;
+}
 
+.en{
+  text-align: right;
+  list-style: none;
+}
 
-
-
-#pageHead .globalNavi {
+.Navi{
+  width:1100px;
   border: solid #CCCCCC;
   border-width: 1px 0;
+}
+
+#pageHead .globalNavi {
+  height: 30px;
   padding: 10px 0;
+  margin: 0 auto;
+  width: 1000px;
 }
 
 #pageHead .globalNavi ul {
@@ -112,16 +155,25 @@ a:hover { color: #996600; }
 #pageHead .globalNavi ul li:first-child {
   border-left: none;
 }
+
 #pageHead .globalNavi ul li a {
   color: #333333;
   text-decoration: none;
   display: block;
   padding: 5px 0
 }
+
 #pageHead .globalNavi ul li a:hover,
 #pageHead .globalNavi ul li.current a {
   background-color: #F2F2E5;
 }
+
+#pageHead .navivar{
+
+}
+
+
+
 
 .single-item img{
   width: 100%;
@@ -132,19 +184,76 @@ a:hover { color: #996600; }
     width: 300px;
     text-align: center;
     margin: 0 0px 25px 25px;
-    float: left;
+    display: inline-block;
     position: relative;
     height: 363px;
 }
 
+.box-actress-outline img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+
 #pageFoot {
+  margin: 0 auto;
   text-align: center;
-    width:980px;
-    height: 40px;
+  width:980px;
+  display: block;
 }
 
 #pageFoot #copyright small{
   font-size: 12px;
   line-height: 1.5;
 }
+
+@media screen and (max-width: 768px) {
+  #page {
+    width: 100%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .Navi {
+    display: none;
+  }
+
+  .slick-arrow {
+    display: none;
+  }
+
+  #pageFoot {
+    width: 100%;
+  }
+
+  .box-actress-list {
+    overflow: hidden;
+    padding-left: 0;
+  }
+
+  .box-actress-outline {
+    // paddingを内側に入るように設定する
+    box-sizing: border-box;
+
+    width: 50%;
+    padding: 0 15px;
+    margin: 0;
+    float: left;
+    height: auto;
+
+    a {
+      display: inline-block;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+
 

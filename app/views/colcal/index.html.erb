@@ -1,130 +1,126 @@
-<body>
 <div id="page">
-<header id="pageHead">
-  <h1 id="Title">ColCal</h1>
-  <p id="catchcopy">気になるあの芸人のスケジュール閲覧から予約まで！</p>
-
-
-<div class="menu">
+  <header id="pageHead">
+    <div class="headmenu">
+      <h1 id="Title">ColCal</h1>
+        <p id="catchcopy">気になるあの芸人のスケジュール閲覧から予約まで！</p>
+      <div class="menu">
         <div class="menu1"></div>
         <div class="menu2"></div>
         <div class="menu3"></div>
-</div>
-     
+      </div>
+    </div>
+    <ul class="js-menu" style="list-style:none; display:none;">
+      <li><a class="en" href="">トップページ</a></li>
+      <li><a class="en" href="">芸人を探す</a></li>
+      <li><a class="en" href="">全体カレンダー</a></li>
+      <li><a class="en" href="">アクセスランキング</a></li>
+    </ul>
 
-
-<script>
-$(function(){
-    $(".menu").click(function(){
-        $(".menu1").toggleClass("menuclick1")
-    });
-    $(".menu").click(function(){
-        $(".menu2").toggleClass("menuclick2")
-    });
-    $(".menu").click(function(){
-        $(".menu3").toggleClass("menuclick3")
-    }); 
-});
- 
-$(function(){
-            $('.menu').click(function(){
-             if ($('ul').css('display') == 'none') {
-            $('ul').slideDown('slow');
-            } else {
-             $('ul').slideUp('slow');
-             }
-            });
-        });
- 
-</script>
-
-<ul style="display:none;">
-　<a href=""><li><p class="en">芸人を探す</p></li></a>
-    <a href=""><li><p class="en">全体カレンダー</p></li></a>
-    <a href=""><li><p class="en">アクセスランキング</p></li></a>
-</ul>
-
-
+<div class="Navi">
   <nav class="globalNavi">
-    <ul>
-      <li class="current"><a href="index.html">トップ</a></li>
+    <ul class="navivar">
+      <li class="current"><a href="/">トップ</a></li>
       <li><a href="about/index.html">芸人を探す</a></li>
       <li><a href="portfolio/index.html">全体カレンダー</a></li>
       <li><a href="contact/index.html">アクセスランキング</a></li>
     </ul>
   </nav>
+</div>
 </header>
-
-<script>
-$("document").ready(function(){
-  $('.single-item').slick();
-});
-</script>
 
   <div id="pageBody">
     <section class="mainVisual">
-    <div class="main">
-       <div class="single-item">
-            <div><img src="http://placehold.jp/1600x640.png"></div>
-            <div><img src="http://placehold.jp/1600x640.png"></div>
-            <div><img src="http://placehold.jp/1600x640.png"></div>
-            <div><img src="http://placehold.jp/1600x640.png"></div>
-        </div>  
-    </div>
-  </div>
+      <div class="main">
+         <div class="single-item">
+              <div><img src="http://placehold.jp/1600x640.png"></div>
+              <div><img src="http://placehold.jp/1600x640.png"></div>
+              <div><img src="http://placehold.jp/1600x640.png"></div>
+              <div><img src="http://placehold.jp/1600x640.png"></div>
+          </div>
+      </div>
     </section>
-    
-    <section class="contents">
-  <h1>芸人一覧<width="241" height="41" alt="芸人一覧"></h1>
-  <ul id="list-geinin-top" class="clearfix">
-        <div class="box-actress-outline">
-                    <a href="芸人個人ページURL">
-                    <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
-                <p><a href="個人ページURL">芸人A<br><span>Geinin A</span></a></p>
-            </div>
+  </div>
 
-        <div class="box-actress-outline">
-                    <a href="芸人個人ページURL">
-                    <img src="http://placehold.jp/300x300.png" alt="芸人B"></a>
-                <p><a href="個人ページURL">芸人B<br><span>Geinin B</span></a></p>
-            </div>
+  <section class="contents">
+    <h1>芸人一覧<width="241" height="41" alt="芸人一覧">
+    </h1>
+    <ul class="box-actress-list">
+      <li class="box-actress-outline">
+        <a href="芸人個人ページURL">
+        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
+        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
+      </li>
+      <li class="box-actress-outline">
+        <a href="芸人個人ページURL">
+        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
+        <p><a href="個人ページURL">芸人A<br><span>Geinin A</span></a></p>
+      </li>
+      <li class="box-actress-outline">
+        <a href="芸人個人ページURL">
+        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
+        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
+      </li>
+      <li class="box-actress-outline">
+        <a href="芸人個人ページURL">
+        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
+        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
+      </li>
+      <li class="box-actress-outline">
+        <a href="芸人個人ページURL">
+        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
+        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
+      </li>
+      <li class="box-actress-outline">
+        <a href="芸人個人ページURL">
+        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
+        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
+      </li>
 
-        <div class="box-actress-outline">
-                    <a href="芸人個人ページURL">
-                    <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
-                <p><a href="個人ページURL">芸人C<br><span>Geinin C</span></a></p>
-            </div>
-
-        <div class="box-actress-outline">
-                    <a href="芸人個人ページURL">
-                    <img src="http://placehold.jp/300x300.png" alt="芸人D"></a>
-                <p><a href="個人ページURL">芸人D<br><span>Geinin D</span></a></p>
-            </div>
-
-        <div class="box-actress-outline">
-                    <a href="芸人個人ページURL">
-                    <img src="http://placehold.jp/300x300.png" alt="芸人E"></a>
-                <p><a href="個人ページURL">芸人E<br><span>Geinin E</span></a></p>
-            </div>
-
-        <div class="box-actress-outline">
-                    <a href="芸人個人ページURL">
-                    <img src="http://placehold.jp/300x300.png" alt="芸人F"></a>
-                <p><a href="個人ページURL">芸人F<br><span>Geinin F</span></a></p>
-            </div>
-  </ul><!--// #lst-actress -->
-
+    </ul>
 </section>
 
-  </div>
+  <footer id="pageFoot">
+    <p class="pageTop"><a href="#page">ページの先頭へ戻る</a></p>
+    <p id="copyright">ColCal
+        <p class="tx-copyright"><small>ColCal Copyright &copy; RHD研修・伊藤颯.</small></p>
+  </footer>
+<script>
+      $("document").ready(function(){
+        $('.single-item').slick({
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          infinite: true,
+          responsive:[{
+            breakpoint: 768,
+            settings:{
+              arrows: false
+            }
+          }]
+        });
+      });
 
+        $(function(){
+            $(".menu").click(function(){
+                $(".menu1").toggleClass("menuclick1")
+            });
+            $(".menu").click(function(){
+                $(".menu2").toggleClass("menuclick2")
+            });
+            $(".menu").click(function(){
+                $(".menu3").toggleClass("menuclick3")
+            }); 
+        });
 
-<footer id="pageFoot">
-<p class="pageTop"><a href="#page">ページの先頭へ戻る</a></p>
-<p id="copyright">ColCal
-    <p class="tx-copyright"><small>ColCal Copyright &copy; RHD研修・伊藤颯.</small></p>
-</footer>
-
+        $(function(){
+                    $('.menu').click(function(){
+                     if ($('.js-menu').css('display') == 'none') {
+                    $('.js-menu').slideDown('slow');
+                    } else {
+                     $('.js-menu').slideUp('slow');
+                     }
+                    });
+                });
+        </script>
 </div>
 
-</body>
