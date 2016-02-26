@@ -48,7 +48,6 @@ end
   gem 'devise'
   gem "font-awesome-rails"
 
-  gem 'sqlite3'
   gem 'fullcalendar-rails'
   gem 'momentjs-rails'
   gem 'jquery-turbolinks'
