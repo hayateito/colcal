@@ -20,7 +20,6 @@ a:hover { color: #996600; }
   margin-top: 30px;
 }
 .pageTop a {
-  background-image: url("../images/ico_pagetop.png");
   background-repeat: no-repeat;
   background-position: 0 50%;
   padding-left: 10px;
@@ -120,6 +119,7 @@ a:hover { color: #996600; }
   width:1100px;
   border: solid #CCCCCC;
   border-width: 1px 0;
+  margin: auto;
 }
 
 #pageHead .globalNavi {
@@ -141,7 +141,7 @@ a:hover { color: #996600; }
 
 #pageHead .globalNavi ul li {
   list-style: none;
-  width: 245px;
+  width: 20%;
   float: left;
   border-left: solid 1px #CCCCCC;
   padding: 0 10px;
@@ -151,7 +151,11 @@ a:hover { color: #996600; }
   font-size: 14px;
   line-height: 1.429;
   font-family: 'Open Sans', sans-serif;
+.logout{
+  border-left: none;
 }
+}
+
 #pageHead .globalNavi ul li:first-child {
   border-left: none;
 }
@@ -168,9 +172,6 @@ a:hover { color: #996600; }
   background-color: #F2F2E5;
 }
 
-#pageHead .navivar{
-
-}
 
 
 

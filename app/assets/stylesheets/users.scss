@@ -82,14 +82,17 @@
 
 .calender{
   width: 100%;
-  border: solid #CCCCCC;
-  border-width: 0.5px 0;
+}
+
+.calclass{
+  padding-bottom: 30px;
 }
 
 .calender-text{
   display: -webkit-flex; /* Safari */
   display: flex;
-  padding-left: 30px;
+  padding: 15px 15px 20px 0;
+
 h2{
   padding-left: 30px;
 }
@@ -98,13 +101,13 @@ h2{
 .bx-calender{
     width: 100%;
     padding: 0 auto;
-iframe{
-  text-align: center;
-}
+// iframe{
+//   text-align: center;
+// }
 }
 
 .event-contents{
-  border: solid #CCCCCC;
+  // border: solid #CCCCCC;
   border-width: 0.5px 0;
 }
 
@@ -136,4 +139,15 @@ iframe{
 
 .profile-box {
   overflow: hidden;
+}
+
+.image_filed_outline{
+    width: 480px;
+    height: 50px;
+    float: left;
+    position: relative;
+    top: -60px;
+}
+.combi_image_field{
+  text-align: center;
 }

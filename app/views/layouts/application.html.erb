@@ -8,6 +8,43 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header id="pageHead">
+    <div class="headmenu">
+    <h1 id="Title">ColCal</h1>
+        <p id="catchcopy">気になるあの芸人のスケジュール閲覧から予約まで！</p>
+      <div class="menu">
+        <div class="menu1"></div>
+        <div class="menu2"></div>
+        <div class="menu3"></div>
+      </div>
+    </div>
+    <ul class="js-menu" style="list-style:none; display:none;">
+      <li><a class="en" href="/">トップページ</a></li>
+      <li><a class="en" href="">芸人を探す</a></li>
+      <li><a class="en" href="/events">全体カレンダー</a></li>
+    <% if user_signed_in? %>
+      <li><a class="loginout" href=
+      <li class="logout"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><a class="loginout" href="/users/sign_in">芸人の方はこちら</a></li>
+    <% end %>
+    </ul>
+<div class="Navi">
+  <nav class="globalNavi">
+    <ul class="navivar">
+      <li class="current"><a href="/">トップ</a></li>
+      <li><a href="#content">芸人を探す</a></li>
+      <li><a href="/events">全体カレンダー</a></li>
+      <% if user_signed_in? %>
+      <li><a class="loginout" href="/users/<%= current_user.id %>">マイページ</a></li>
+      <li class="logout"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><a class="loginout" href="/users/sign_in">芸人の方はこちら</a></li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+</header>
 
 <%= yield %>
 

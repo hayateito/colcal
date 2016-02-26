@@ -1,0 +1,34 @@
+<%= form_for(@calevent) do |f| %>
+  <% if @calevent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@calevent.errors.count, "error") %> prohibited this calevent from being saved:</h2>
+
+      <ul>
+      <% @calevent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :出演タイトル %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :開始時間 %><br>
+    <%= f.datetime_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :終了時間 %><br>
+    <%= f.datetime_select :end %>
+  </div>
+  <div class="field">
+    <%= f.label :終日の場合はチェックを入れてください %><br>
+    <%= f.check_box :allDay %>
+  </div>
+  <div class="actions">
+    <%= f.hidden_field(:combination_id, value: current_user.combination_id) %>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -63,6 +63,11 @@ p {
     -webkit-margin-end: 0px;
 }
 
+/*棒線*/
+.bar{
+  border-bottom: solid 0.5px #CCCCCC;
+}
+
 /* このクラスをfloat解除したい要素の親に指定する。 */
 .clearfix:after {
   content: "";

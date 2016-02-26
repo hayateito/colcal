@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  root 'colcal#index'
   devise_for :users
-  resources :users, only: :index do
+  resources :calevents
+  root 'colcal#index'
+  resources :users, only: [:show, :edit, :update] do
     collection do
       get 'search'
     end
+  end
+  resources :combinations, only: [:show, :update] do
   end
   resources :events, only: [:index, :new, :create, :edit, :destroy] do
     collection do

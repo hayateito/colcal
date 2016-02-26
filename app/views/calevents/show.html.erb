@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @calevent.title %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @calevent.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @calevent.end %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @calevent.color %>
+</p>
+
+<p>
+  <strong>Allday:</strong>
+  <%= @calevent.allDay %>
+</p>
+
+<%= link_to 'Edit', edit_calevent_path(@calevent) %> |
+<%= link_to 'Back', calevents_path %>
+<div id="calendar"></div>

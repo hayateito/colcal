@@ -1,0 +1,149 @@
+<div id="page">
+<section id="profile-contens">
+  <div id="profile">
+    <div class="profile-box">
+    <% if @user.combination.avatar? %>
+      <%= image_tag  current_user.combination.avatar.url(:medium), :class => "img-profile" %>
+    <% else %>
+      <img src="http://placehold.jp/560x560.png" width="560" height="560" alt="<%= @user.combination.key %> プロフィール写真" class="img-profile">
+    <% end %>
+       <div class="bx-profile">
+        <h1 class="name">
+          <span><%= @user.combination.kana %></span>
+            <br>
+            <%= @user.combination.key %>
+        </h1>
+        <h2 class="office">
+          <%= @user.combination.office %>
+        </h2>
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th></th>
+              <% @user.combination.users.each do |useraikata| %>
+              <th><%= useraikata.name %></th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">担当</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.tanto %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">性別</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.sex %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">生年月日</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.birthday %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">身長/体重</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.heightweight %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">血液型</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.blood %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">出身地</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.graduate %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">趣味</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.hobby %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">養成所</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.school %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">デビュー</th>
+              <% @user.combination.users.each do |useraikata| %>
+              <td><%= useraikata.debut %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">SNS</th>
+              <td class="bx-links">
+                <a href="https://twitter.com/hayateito" target="_blank">
+                <i class="fa fa-twitter twitter"></i>
+                </a>
+              </td>
+              <td class="bx-links">
+                <a href="https://twitter.com/leroytaro" target="_blank">
+                <i class="fa fa-twitter twitter"></i>
+                </a>
+              </td>
+          </tbody>
+        </table>
+      </div>
+    <div class="image_filed_outline">
+      <%= form_for (@user.combination) do |f| %>
+      <div class="combi_image_field">
+        <%= f.file_field :avatar %>
+        <%= f.submit "画像を登録する" %>
+      </div>
+      <% end %>
+    </div>
+    <div class="edit_jump">
+      <p><a href="/users/<%= current_user.id %>/edit" target="_blank">登録情報変更はこちら</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="bar">
+</div>
+
+<section class="pro-calender">
+  <div class="calender">
+    <div class="calender-text">
+    <i class="fa fa-table table"></i>
+    <h2>出演情報カレンダー</h2>
+    </div>
+      <p><a href="/calevents/new" target="_blank">出演情報追加はこちらから！</a>
+      </p>
+    <div class="bx-calender">
+      <div id="calendar" class="calclass">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="event-contents">
+    <h2>出演情報詳細</h2>
+      <p><a href="イベントページ" target="_blank">ライブ1</a>
+      </p>
+</section> -->
+
+<div class="bar">
+</div>
+
+<footer id="pageFoot">
+    <p id="copyright">ColCal
+        <p class="tx-copyright"><small>ColCal Copyright &copy; RHD研修・伊藤颯.</small></p>
+</footer>
+<%= javascript_tag do %>
+    window.combination_id = <%= @user.combination.id %>;
+<% end %>
+</div>

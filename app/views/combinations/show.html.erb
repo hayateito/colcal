@@ -1,0 +1,159 @@
+<div id="page">
+<section id="profile-contens">
+  <p>誰でも見れるページです</p>
+  <div id="profile">
+    <div class="profile-box">
+      <img src="http://placehold.jp/560x560.png" width="560" height="560" alt="芸人A プロフィール写真" class="img-profile">
+
+      <div class="bx-profile">
+        <h1 class="name">
+          <span><%= @combination.kana %></span>
+            <br>
+            <%= @combination.key %>
+        </h1>
+        <h2 class="office">
+          <%= @combination.office %>
+        </h2>
+        <table class="user-table">
+          <thead>
+            <tr><th></th>
+              <% @combination.users.each do |user| %>
+              <th><%= user.name %></th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">担当</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.tanto %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">性別</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.sex %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">生年月日</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.birthday %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">身長/体重</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.heightweight %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">血液型</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.blood %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">出身地</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.graduate %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">趣味</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.hobby %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">養成所</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.school %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">デビュー</th>
+              <% @combination.users.each do |user| %>
+              <td><%= user.debut %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th colspan="" rowspan="" headers="" scope="">SNS</th>
+              <% @combination.users.each do |user| %>
+              <td class="bx-links">
+                <a href="https://twitter.com/<%= user.twitter %>" target="_blank">
+                <i class="fa fa-twitter twitter"></i>
+                </a>
+              </td>
+              <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bar">
+</div>
+
+<section class="pro-calender">
+  <div class="calender">
+    <div class="calender-text">
+    <i class="fa fa-table table"></i>
+    <h2>出演情報カレンダー</h2>
+    </div>
+    <div class="bx-calender">
+      <div id="calendar" class="calclass">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="event-contents">
+    <h2>出演情報詳細</h2>
+      <p><a href="イベントページ" target="_blank">ライブ1</a>
+      </p>
+</section> -->
+
+<div class="bar">
+</div>
+
+<footer id="pageFoot">
+    <p id="copyright">ColCal
+        <p class="tx-copyright"><small>ColCal Copyright &copy; RHD研修・伊藤颯.</small></p>
+</footer>
+
+<script>
+$(function(){
+    $(".menu").click(function(){
+        $(".menu1").toggleClass("menuclick1")
+    });
+    $(".menu").click(function(){
+        $(".menu2").toggleClass("menuclick2")
+    });
+    $(".menu").click(function(){
+        $(".menu3").toggleClass("menuclick3")
+    }); 
+});
+
+$(function(){
+            $('.menu').click(function(){
+             if ($('.js-menu').css('display') == 'none') {
+            $('.js-menu').slideDown('slow');
+            } else {
+             $('.js-menu').slideUp('slow');
+             }
+            });
+        });
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+    })
+});
+</script>
+<%= javascript_tag do %>
+    window.combination_id = <%= @combination.id %>;
+<% end %>
+</div>
+

@@ -1,33 +1,4 @@
 <div id="page">
-  <header id="pageHead">
-    <div class="headmenu">
-      <h1 id="Title">ColCal</h1>
-        <p id="catchcopy">気になるあの芸人のスケジュール閲覧から予約まで！</p>
-      <div class="menu">
-        <div class="menu1"></div>
-        <div class="menu2"></div>
-        <div class="menu3"></div>
-      </div>
-    </div>
-    <ul class="js-menu" style="list-style:none; display:none;">
-      <li><a class="en" href="">トップページ</a></li>
-      <li><a class="en" href="">芸人を探す</a></li>
-      <li><a class="en" href="">全体カレンダー</a></li>
-      <li><a class="en" href="">アクセスランキング</a></li>
-    </ul>
-
-<div class="Navi">
-  <nav class="globalNavi">
-    <ul class="navivar">
-      <li class="current"><a href="/">トップ</a></li>
-      <li><a href="about/index.html">芸人を探す</a></li>
-      <li><a href="portfolio/index.html">全体カレンダー</a></li>
-      <li><a href="contact/index.html">アクセスランキング</a></li>
-    </ul>
-  </nav>
-</div>
-</header>
-
   <div id="pageBody">
     <section class="mainVisual">
       <div class="main">
@@ -41,86 +12,29 @@
     </section>
   </div>
 
+<div id="content">
   <section class="contents">
     <h1>芸人一覧<width="241" height="41" alt="芸人一覧">
     </h1>
     <ul class="box-actress-list">
-      <li class="box-actress-outline">
-        <a href="芸人個人ページURL">
-        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
-        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
-      </li>
-      <li class="box-actress-outline">
-        <a href="芸人個人ページURL">
-        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
-        <p><a href="個人ページURL">芸人A<br><span>Geinin A</span></a></p>
-      </li>
-      <li class="box-actress-outline">
-        <a href="芸人個人ページURL">
-        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
-        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
-      </li>
-      <li class="box-actress-outline">
-        <a href="芸人個人ページURL">
-        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
-        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
-      </li>
-      <li class="box-actress-outline">
-        <a href="芸人個人ページURL">
-        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
-        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
-      </li>
-      <li class="box-actress-outline">
-        <a href="芸人個人ページURL">
-        <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
-        <p><a href="芸人個人ページURL">芸人A<br><span>Geinin A</span></a></p>
-      </li>
-
+      <% @combinations.each do |combination| %>
+        <li class="box-actress-outline">
+            <a href="/combinations/<%= combination.id %>">
+            <img src="http://placehold.jp/300x300.png" alt="芸人A"></a>
+            <p><a href="http://localhost:3000/users">芸人A<br><span>Geinin A</span></a></p>
+        </li>
+      <% end %>
     </ul>
 </section>
+</div>
 
   <footer id="pageFoot">
     <p class="pageTop"><a href="#page">ページの先頭へ戻る</a></p>
+  <div class="bar">
+  </div>
     <p id="copyright">ColCal
         <p class="tx-copyright"><small>ColCal Copyright &copy; RHD研修・伊藤颯.</small></p>
   </footer>
-<script>
-      $("document").ready(function(){
-        $('.single-item').slick({
-          dots: true,
-          autoplay: true,
-          autoplaySpeed: 4000,
-          infinite: true,
-          responsive:[{
-            breakpoint: 768,
-            settings:{
-              arrows: false
-            }
-          }]
-        });
-      });
 
-        $(function(){
-            $(".menu").click(function(){
-                $(".menu1").toggleClass("menuclick1")
-            });
-            $(".menu").click(function(){
-                $(".menu2").toggleClass("menuclick2")
-            });
-            $(".menu").click(function(){
-                $(".menu3").toggleClass("menuclick3")
-            }); 
-        });
-
-        $(function(){
-                    $('.menu').click(function(){
-                     if ($('.js-menu').css('display') == 'none') {
-                    $('.js-menu').slideDown('slow');
-                    } else {
-                     $('.js-menu').slideUp('slow');
-                     }
-                    });
-                });
-        </script>
 </div>
 

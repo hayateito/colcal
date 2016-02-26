@@ -1,0 +1,91 @@
+<h2>芸人プロフィール登録の方へ</h2>
+  <p>下記のフォーマットを個人毎に記入して、登録してください。</p>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :芸名 %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :担当 %><br />
+    <%= f.text_field :tanto %>
+  </div>
+
+  <div class="field">
+    <%= f.label :性別 %><br />
+    <%= f.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= f.label :生年月日 %><br />
+    <%= f.text_field :birthday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :身長／体重 %><br />
+    <%= f.text_field :heightweight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :血液型 %><br />
+    <%= f.text_field :blood %>
+  </div>
+
+  <div class="field">
+    <%= f.label :出身地 %><br />
+    <%= f.text_field :graduate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :趣味 %><br />
+    <%= f.text_field :hobby %>
+  </div>
+
+  <div class="field">
+    <%= f.label :養成所 %><br />
+    <%= f.text_field :school %>
+  </div>
+
+  <div class="field">
+    <%= f.label :デビュー %><br />
+    <%= f.text_field :debut %>
+  </div>
+
+  <div class="field">
+    <%= f.label :TwitterIDがあればIDを打ち込んでください %><br />
+    <%= f.text_field :twitter %>
+  </div>
+
+  <br>
+  <div class='form-combination'>
+    <%= f.label :コンビ名・トリオ名・ピン名（全角・半角に注意してコンビ間で同じものを記入してください。） %><br />
+    <%= f.text_field :combination_key, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
