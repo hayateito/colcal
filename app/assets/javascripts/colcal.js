@@ -1,4 +1,4 @@
-      $("document").ready(function(){
+      $(window).load(function(){
         $('.single-item').slick({
           dots: true,
           autoplay: true,
@@ -13,8 +13,8 @@
         });
       });
 
-        $(function(){
-            $(".menu").click(function(){
+      $(window).load(function(){
+        $(".menu").click(function(){
                 $(".menu1").toggleClass("menuclick1")
             });
             $(".menu").click(function(){
@@ -22,15 +22,16 @@
             });
             $(".menu").click(function(){
                 $(".menu3").toggleClass("menuclick3")
-            }); 
-        });
+            });
+          });
 
-        $(function(){
-                    $('.menu').click(function(){
+      $(window).load(function(){
+        $('.menu').click(function(){
                      if ($('.js-menu').css('display') == 'none') {
                     $('.js-menu').slideDown('slow');
                     } else {
                      $('.js-menu').slideUp('slow');
                      }
                     });
-                });
+
+      });

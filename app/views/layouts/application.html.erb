@@ -3,8 +3,8 @@
 <head>
   <title>Colcal</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -23,6 +23,7 @@
       <li><a class="en" href="">芸人を探す</a></li>
       <li><a class="en" href="/events">全体カレンダー</a></li>
     <% if user_signed_in? %>
+      <li><a class="loginout" href="/users/<%= current_user.id %>">マイページ</a></li>
       <li><a class="loginout" href=
       <li class="logout"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
       <% else %>

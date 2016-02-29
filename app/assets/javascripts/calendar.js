@@ -19,9 +19,10 @@ $(document).ready(function() {
 
     var calendar = $('#calendar').fullCalendar({
         header: {
-            left: 'prev,next today',
+            left: '',
+            // month agendaWeek agendaDay
             center: 'title',
-            right: 'month agendaWeek agendaDay'
+            right: 'prev,next today'
         },
         // lang: 'ja'
         firstDay:1,
@@ -39,8 +40,8 @@ $(document).ready(function() {
             },
             titleFormat: {
                 month: 'YYYY年M月',
-                week: "YYYY年M月d日{ ～ }{[yyyy年]}{[M月]d日}",
-                day: "YYYY年M月d日'('ddd')'"
+                week: "YYYY年M月d日{ ~ }{[yyyy年]}{[M月]d日}",
+                day: "YYYY年M月d日(ddd)"
             },
             buttonText: {
                 today: '今日',
@@ -57,6 +58,9 @@ $(document).ready(function() {
             type: "GET",
             data: { combination_id: combination_id }
         },
+        dayClick: false,
+        // axisFormat: false,
+        // slotDuration: false,
         selectable: true,
         selectHelper: true,
         ignoreTimezone: false,

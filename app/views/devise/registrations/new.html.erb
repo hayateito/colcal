@@ -1,3 +1,4 @@
+<div class="contents row">
 <h2>芸人プロフィール登録の方へ</h2>
   <p>下記のフォーマットを個人毎に記入して、登録してください。</p>
 
@@ -10,7 +11,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :パスワード %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -18,7 +19,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :パスワード確認 %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
@@ -84,8 +85,9 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "登録する" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
