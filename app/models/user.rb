@@ -10,11 +10,16 @@ class User < ActiveRecord::Base
   has_many :calevents
   before_validation :combination_key_to_id, if: :has_combination_key?
 
-  has_attached_file :avatar,
-    styles: { medium: "100x100!",thumb:"100x100!" }
-
-  validates_attachment_content_type :avatar,
-    content_type: ["image/jpg","image/jpeg","image/png"]
+  validates :name, presence: true
+  validates :tanto, presence: true
+  validates :sex, presence: true
+  validates :birthday, presence: true
+  validates :heightweight, presence: true
+  validates :blood, presence: true
+  validates :graduate, presence: true
+  validates :hobby, presence: true
+  validates :school, presence: true
+  validates :debut, presence: true
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

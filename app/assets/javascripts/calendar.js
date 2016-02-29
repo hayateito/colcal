@@ -58,6 +58,8 @@ $(document).ready(function() {
             type: "GET",
             data: { combination_id: combination_id }
         },
+        eventClick(calEvent, jsEvent, view){
+        },
         dayClick: false,
         // axisFormat: false,
         // slotDuration: false,

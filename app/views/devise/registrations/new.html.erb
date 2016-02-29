@@ -7,75 +7,75 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, placeholder:"あなたのメールアドレス", autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :パスワード %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> ケタ以上にしてください)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, placeholder:"8ケタ以上の任意パスワード", autocomplete: "off" %>
   </div>
 
   <div class="field">
     <%= f.label :パスワード確認 %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, placeholder:"上で設定したパスワード", autocomplete: "off" %>
   </div>
 
   <div class="field">
     <%= f.label :芸名 %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder:"芸名太郎", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :担当 %><br />
-    <%= f.text_field :tanto %>
+    <%= f.text_field :tanto, placeholder:"ボケ・ツッコミなど", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :性別 %><br />
-    <%= f.text_field :sex %>
+    <%= f.text_field :sex, placeholder:"男", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :生年月日 %><br />
-    <%= f.text_field :birthday %>
+    <%= f.text_field :birthday, placeholder:"1990年1月1日", autocomplete: "off"  %>
   </div>
 
   <div class="field">
-    <%= f.label :身長／体重 %><br />
-    <%= f.text_field :heightweight %>
+    <%= f.label :身長cm／体重kg %><br />
+    <%= f.text_field :heightweight, placeholder:"180cm/70kg", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :血液型 %><br />
-    <%= f.text_field :blood %>
+    <%= f.text_field :blood, placeholder:"A型", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :出身地 %><br />
-    <%= f.text_field :graduate %>
+    <%= f.text_field :graduate, placeholder:"東京都", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :趣味 %><br />
-    <%= f.text_field :hobby %>
+    <%= f.text_field :hobby, placeholder:"スポーツ全般/写真", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :養成所 %><br />
-    <%= f.text_field :school %>
+    <%= f.text_field :school, placeholder:"東京NSC18期", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :デビュー %><br />
-    <%= f.text_field :debut %>
+    <%= f.text_field :debut, placeholder:"2009年4月", autocomplete: "off"  %>
   </div>
 
   <div class="field">
     <%= f.label :TwitterIDがあればIDを打ち込んでください %><br />
-    <%= f.text_field :twitter %>
+    <%= f.text_field :twitter, placeholder:"hayateito", autocomplete: "off"  %>
   </div>
 
   <br>
@@ -91,3 +91,7 @@
 
 <%= render "devise/shared/links" %>
 </div>
+
+  <%= javascript_tag do %>
+    window.combination_id = 0;
+<% end %>

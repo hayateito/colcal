@@ -1,18 +1,19 @@
+<div class="contents row">
 <h2>ログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email,  placeholder:"あなたのメールアドレス", autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, placeholder:"あなたの設定したパスワード", autocomplete: "off" %>
   </div>
 
   <div class='form-combination'>
-    <%= f.label :コンビ名（全角・半角に注意してコンビ間で同じものを記入してください。 %><br />
+    <%= f.label :コンビ名（全角・半角に注意してコンビ間で同じものを記入してください。） %><br />
     <%= f.text_field :combination_key, class: 'form-control' %>
   </div>
 
@@ -27,4 +28,10 @@
     <%= f.submit "ログイン" %>
   </div>
 <% end %>
+</div>
+
 <%= render "devise/shared/links" %>
+
+  <%= javascript_tag do %>
+    window.combination_id = 0;
+<% end %>

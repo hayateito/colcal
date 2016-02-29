@@ -93,3 +93,10 @@ p {
   color: #00b389;
 }
 
+.js-menu{
+  text-align: right;
+}
+
+.js-menu li{
+    padding:0 10px;
+}
